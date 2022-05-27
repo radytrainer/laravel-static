@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.card {
+    margin-top: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 10px;
+    border-radius: 7px;
+    width: 24%;
+    box-sizing: border-box;
+    border-top: 3px solid green;
+}
+
+.card a {
+    text-decoration: none;
+    color: black;
+}
+.card h3 {
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+/* Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+tr,td,th {
+    border: 1px solid black;
+    padding: 10px;
+}
+td {
+    color:#000000cf;
+    font-weight: 500;
+}
+
+#query {
+    background: #0698c4;
+    color:#fff;
+}
+#elo {
+    background: #7d0d9a;
+    color:#fff;
+}

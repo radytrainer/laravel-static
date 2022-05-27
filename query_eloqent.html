@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laravel Static Blog</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+
+                <th id="query">Query Builder</th>
+                <th id="elo">Eloquent Models</th>
+            </tr>
+            <tr>
+               
+                <td><code>DB::select ('SELECT * FROM table-name’ WHERE id = 1');</code></td>
+                <td><code>Example::find(1)</code></td>
+            </tr>
+            <tr>
+               
+                <td><code>DB::table('table-name')->get();</code></td>
+                <td><code>Example::all(); <br> Example::get();</code></td>
+            </tr>
+            <tr>
+                <td><code>DB::table ('table-name')->first();</code></td>
+                <td><code>Example::first();</code></td>
+            </tr>
+            <tr>
+                <td><code>DB::table ('table-name')->select('title', 'description')->get();</code></td>
+                <td><code>
+                    Example::all('name','price'); <br>
+                    Example::get(['name','price']);</code>
+                </td>
+            </tr>
+            <tr>
+                <td><code>DB::table ('table-name')->where('id', '>', 10)->get();</code></td>
+                <td><code>Example::where('id', '>', 10)->get();</code></td>
+            </tr>
+            <tr>
+                <td><code>DB::table ('table-name')->whereBetween(col1, [value1, value2])->get();</code></td>
+                <td><code>Example::whereBetween(col1, [value1, value2])->get();</code></td>
+            </tr>
+            <tr>
+                <td><code>DB::table ('table-name')->whereNotBetween(col1, [value1, value2])->get();</code></td>
+                <td><code>Example::whereNotBetween(col1, [value1, value2])->get();</code></td>
+            </tr>
+            <tr>
+                <td><code>DB::table ('table-name')-> whereIn(col1, [value1, value2, …])->get();</code></td>
+                <td><code>Example::whereIn(col1, [value1, value2, …])->get(); <br>
+                 Example::find([value1, value2, value2,...]);</code></td>
+            </tr>
+            <tr>
+                <td><code>DB::table ('table-name')->orderBy(col, 'asc or desc')->get();</code></td>
+                <td><code>Example::orderBy(col, 'asc or desc')->get();</code></td>
+            </tr>
+            <tr>
+                <td><code>DB::table ('table-name')->inRandomOrder()->get();</code></td>
+                <td><code>Example::inRandomOrder()->get();</code></td>
+            </tr>
+            <tr>
+                <td><code>DB::table ('table-name')-> max(col);</code></td>
+                <td><code>Example::max(col);</code></td>
+            </tr>
+            <tr>
+                
+                <td><code>DB::table ('table-name')-> sum(col);</code></td>
+                <td><code>Example::sum(col);</code></td>
+            </tr>
+            <tr>
+                
+                <td><code>DB::table ('table-name')-> avg(col);</code></td>
+                <td><code>Example::avg(col);</code></td>
+            </tr>
+            <tr>
+                
+                <td><code>DB::table ('table-name')-> skip (value)->take(number)->get();</code></td>
+                <td><code>Example::skip(number)->take(number)->get();</code></td>
+            </tr>
+            <tr>
+                
+                <td><code>DB::table ('table-name')->take(number)->get();</code></td>
+                <td><code>Example::take(number)->get();</code></td>
+            </tr>
+           
+        </table>
+    </div>
+</body>
+</html>
