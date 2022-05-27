@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laravel Static Blog</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="container">
+        <table>
+            <tr>
+                <th id="query">Route</th>
+                <th id="elo">Function</th>
+            </tr>
+            <tr>
+                <td>
+                    <code>Route::get('examples', [ExampleController::claas, 'index']);</code>
+                </td>
+                <td>
+                    <code>
+                        public function index() { <br>
+                            &nbsp;&nbsp;&nbsp;return Example::all();
+                            <br>
+                        }
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>Route::get('examples/{id}', [ExampleController::claas, 'show']);</code>
+                </td>
+                <td>
+                    <code>
+                        public function show($id) { <br>
+                            &nbsp;&nbsp;&nbsp;return Example::findOrFail();
+                            <br>
+                        }
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>Route::post('examples', [ExampleController::claas, 'store']);</code>
+                </td>
+                <td>
+                    <code>
+                        public function store(Request $request) { <br>
+                            &nbsp;&nbsp;&nbsp;$test = new Example(); <br>
+                            &nbsp;&nbsp;&nbsp;$test->column1 = $request->input-name; <br>
+                            &nbsp;&nbsp;&nbsp;$test->column2 = $request->input-name; <br>
+                            &nbsp;&nbsp;&nbsp;$test->save(); <br>
+                            &nbsp;&nbsp;&nbsp;return response()->json(['sms' => 'Create successfully'], 201);
+                            <br>
+                        }
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>Route::update('examples/{id}', [ExampleController::claas, 'update']);</code>
+                </td>
+                <td>
+                    <code>
+                        public function update(Request $request, $id) { <br>
+                            &nbsp;&nbsp;&nbsp;$test = Example::findOrFail($id); <br>
+                            &nbsp;&nbsp;&nbsp;$test->column1 = $request->input-name; <br>
+                            &nbsp;&nbsp;&nbsp;$test->column2 = $request->input-name; <br>
+                            &nbsp;&nbsp;&nbsp;$test->save(); <br>
+                            &nbsp;&nbsp;&nbsp;return response()->json(['sms' => 'Update successfully'], 200);
+                            <br>
+                        }
+                    </code>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <code>Route::delete('examples/{id}', [ExampleController::claas, 'destroy']);</code>
+                </td>
+                <td>
+                    <code>
+                        public function destroy($id) { <br>
+                            &nbsp;&nbsp;&nbsp;return Example::destroy($id);
+                            <br>
+                        }
+                    </code>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

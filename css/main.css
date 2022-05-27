@@ -43,6 +43,7 @@ tr,td,th {
 td {
     color:#000000cf;
     font-weight: 500;
+    font-size: 15px;
 }
 
 #query {
